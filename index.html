@@ -1,34 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<title></title>
 </head>
-<body>
-<p>
-    <label>Manufacturing Cost</label>
-    <input id="manufacture" type="number" placeholder="Manufacturing Cost" oninput="manufacture(this.value)"
-           onchange="manufacture(this.value)">
-</p>
-<p>
-    <label>Profit</label>
-    <input id="profit" type="number" placeholder="Profit" oninput="profit(this.value)" onchange="profit(this.value)">
-</p>
-<p>
-    <label>MRP</label>
-    <input id="mrp" type="number" placeholder="MRP" oninput="mrp(this.value)" onchange="mrp(this.value)">
-</p>
 
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<body class="bg-gradient-primary">
+
+<div class="container-fluid">
+    <div class="card mt-5 mx-0 col-4 text-center">
+        <div class="card-header">
+            
+        </div>
+        <div class="justify-content-center">
+            <label for="manufacture" class="mb-0 font-weight-bold text-gray-800">Manufacturing Cost</label>
+            <input id="manufacture" type="number" placeholder="Manufacturing Cost" oninput="manufacture(this.value)"
+                   onchange="manufacture(this.value)">
+        </div>
+        <p></p>
+        <p>
+
+        </p>
+        <p>
+            <label class="mb-0 font-weight-bold text-gray-800">MRP</label>
+            <input id="mrp" type="number" placeholder="MRP" oninput="mrp(this.value)" onchange="mrp(this.value)">
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-md-6 my-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <!--                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>-->
+                            <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>-->
+                            <div class="test-xl font-weight-bold text-primary text-uppercase mb-1 h4">Sales Partner
+                            </div>
+                            <label class="mb-0 font-weight-bold text-gray-800">Margin Percentage</label>
+                            <input id="sp_margin" type="number" placeholder="" oninput="sp_margin(this.value)"
+                                   onchange="sp_margin(this.value)" value="1">
+                            <div>
+                                <label class="font-weight-bold mb-0 text-gray-800 my-2">Sales Partner's
+                                    Commision:</label>
+                                <span class="font-weight-bold mb-0 text-gray-800 my-2" id="sp_comm"></span>
+                            </div>
+
+                            <label class="font-weight-bold mb-0 text-gray-800">Profit:</label>
+                            <span class="font-weight-bold mb-0 text-gray-800" id="sp_profit"></span>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 my-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <!--                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>-->
+                            <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>-->
+                            <div class="test-xl font-weight-bold text-primary text-uppercase mb-1 h4">Promoter</div>
+                            <label class="mb-0 font-weight-bold text-gray-800">Margin Percentage</label>
+                            <input id="p_margin" type="number" placeholder="" oninput="p_margin(this.value)"
+                                   onchange="p_margin(this.value)" value="1">
+                            <div>
+                                <label class="font-weight-bold mb-0 text-gray-800 my-2">Promoters's
+                                    Commission:</label>
+                                <span class="font-weight-bold mb-0 text-gray-800 my-2" id="p_comm"></span>
+                            </div>
+
+                            <label class="font-weight-bold mb-0 text-gray-800">Profit:</label>
+                            <span class="font-weight-bold mb-0 text-gray-800" id="p_profit"></span>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 my-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <!--                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>-->
+                            <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>-->
+                            <div class="test-xl font-weight-bold text-primary text-uppercase mb-1 h4">Amazon
+                            </div>
+                            <label class="mb-0 font-weight-bold text-gray-800">Margin Percentage</label>
+                            <input id="a_margin" type="number" placeholder="" oninput="a_margin(this.value)"
+                                   onchange="a_margin(this.value)" value="1">
+                            <div>
+                                <label class="font-weight-bold mb-0 text-gray-800 my-2">Amazon's
+                                    Commission:</label>
+                                <span class="font-weight-bold mb-0 text-gray-800 my-2" id="a_comm"></span>
+                            </div>
+
+                            <label class="font-weight-bold mb-0 text-gray-800">Profit:</label>
+                            <span class="font-weight-bold mb-0 text-gray-800" id="a_profit"></span>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 my-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <!--                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>-->
+                            <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>-->
+                            <div class="test-xl font-weight-bold text-primary text-uppercase mb-1 h4">Retailer
+                            </div>
+                            <label class="mb-0 font-weight-bold text-gray-800">Margin Percentage</label>
+                            <input id="r_margin" type="number" placeholder="" oninput="r_margin(this.value)"
+                                   onchange="r_margin(this.value)" value="1">
+                            <div>
+                                <label class="font-weight-bold mb-0 text-gray-800 my-2">Retailer's
+                                    Commission:</label>
+                                <span class="font-weight-bold mb-0 text-gray-800 my-2" id="r_comm"></span>
+                            </div>
+
+                            <label class="font-weight-bold mb-0 text-gray-800">Profit:</label>
+                            <span class="font-weight-bold mb-0 text-gray-800" id="r_profit"></span>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
 function manufacture(valNum) {
-  document.getElementById("profit").value=document.getElementById("mrp").value-valNum;
+  p=document.getElementById("mrp").value-valNum;
+
+  spp=(parseInt(document.getElementById("sp_margin").value))/100
+  document.getElementById("sp_comm").innerHTML=(p*spp).toFixed(2)
+  document.getElementById("sp_profit").innerHTML=(p-p*spp).toFixed(2)
+
+  pp=(parseInt(document.getElementById("p_margin").value))/100
+  document.getElementById("p_comm").innerHTML=(p*pp).toFixed(2)
+  document.getElementById("p_profit").innerHTML=(p-p*pp).toFixed(2)
+
+  ap=(parseInt(document.getElementById("a_margin").value))/100
+  document.getElementById("a_comm").innerHTML=(p*ap).toFixed(2)
+  document.getElementById("a_profit").innerHTML=(p-p*ap).toFixed(2)
+
+  rp=(parseInt(document.getElementById("r_margin").value))/100
+  document.getElementById("r_comm").innerHTML=(p*rp).toFixed(2)
+  document.getElementById("r_profit").innerHTML=(p-p*rp).toFixed(2)
 }
+
 function mrp(valNum) {
-  document.getElementById("profit").value=valNum-document.getElementById("manufacture").value;
+  p=valNum-document.getElementById("manufacture").value;
+
+  spp=(parseInt(document.getElementById("sp_margin").value))/100
+  document.getElementById("sp_comm").innerHTML=(p*spp).toFixed(2)
+  document.getElementById("sp_profit").innerHTML=(p-p*spp).toFixed(2)
+
+  pp=(parseInt(document.getElementById("p_margin").value))/100
+  document.getElementById("p_comm").innerHTML=(p*pp).toFixed(2)
+  document.getElementById("p_profit").innerHTML=(p-p*pp).toFixed(2)
+
+  ap=(parseInt(document.getElementById("a_margin").value))/100
+  document.getElementById("a_comm").innerHTML=(p*ap).toFixed(2)
+  document.getElementById("a_profit").innerHTML=(p-p*ap).toFixed(2)
+
+  rp=(parseInt(document.getElementById("r_margin").value))/100
+  document.getElementById("r_comm").innerHTML=(p*rp).toFixed(2)
+  document.getElementById("r_profit").innerHTML=(p-p*rp).toFixed(2)
+
 }
-function profit(valNum) {
-  document.getElementById("mrp").value=parseInt(valNum)+parseInt(document.getElementById("manufacture").value);
+
+function sp_margin(valNum) {
+  p=document.getElementById("mrp").value-document.getElementById("manufacture").value;
+  spp=valNum/100
+  document.getElementById("sp_comm").innerHTML=(p*spp).toFixed(2)
+  document.getElementById("sp_profit").innerHTML=(p-p*spp).toFixed(2)
+}
+
+function p_margin(valNum) {
+  p=document.getElementById("mrp").value-document.getElementById("manufacture").value;
+  pp=valNum/100
+  document.getElementById("p_comm").innerHTML=(p*pp).toFixed(2)
+  document.getElementById("p_profit").innerHTML=(p-p*pp).toFixed(2)
+}
+
+function a_margin(valNum) {
+  p=document.getElementById("mrp").value-document.getElementById("manufacture").value;
+  ap=valNum/100
+  document.getElementById("a_comm").innerHTML=(p*ap).toFixed(2)
+  document.getElementById("a_profit").innerHTML=(p-p*ap).toFixed(2)
+}
+
+function r_margin(valNum) {
+  p=document.getElementById("mrp").value-document.getElementById("manufacture").value;
+  rp=valNum/100
+  document.getElementById("r_comm").innerHTML=(p*rp).toFixed(2)
+  document.getElementById("r_profit").innerHTML=(p-p*rp).toFixed(2)
 }
 </script>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
