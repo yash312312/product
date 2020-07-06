@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Manufacturing Cost</label>
+    <input id="manufacture" type="number" placeholder="Manufacturing Cost" oninput="manufacture(this.value)"
+           onchange="manufacture(this.value)">
+</p>
+<p>
+    <label>Profit</label>
+    <input id="profit" type="number" placeholder="Profit" oninput="profit(this.value)" onchange="profit(this.value)">
+</p>
+<p>
+    <label>MRP</label>
+    <input id="mrp" type="number" placeholder="MRP" oninput="mrp(this.value)" onchange="mrp(this.value)">
+</p>
+
+<script>
+function manufacture(valNum) {
+  document.getElementById("profit").value=document.getElementById("mrp").value-valNum;
+}
+function mrp(valNum) {
+  document.getElementById("profit").value=valNum-document.getElementById("manufacture").value;
+}
+function profit(valNum) {
+  document.getElementById("mrp").value=parseInt(valNum)+parseInt(document.getElementById("manufacture").value);
+}
+</script>
+</body>
+</html>
